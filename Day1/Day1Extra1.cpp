@@ -1,14 +1,12 @@
-
-string reverseWord(string str){
-    int i=0,j=str.length()-1;
-    char temp;
-    while(i<j)
+pair<long long, long long> getMinMax(long long a[], int n) {
+    long long int mini=a[0],maxi=a[0];
+    for(long long int i=0;i<n;i++)
     {
-        temp=str[i];
-        str[i++]=str[j];
-        str[j--]=temp;
-        
+        if(a[i]<mini)
+        mini=a[i];
+        if(a[i]>maxi)
+        maxi=a[i];
     }
-    return str;
-  //Your code here
+    pair<long long int,long long int> p = make_pair(mini,maxi);
+    return p;
 }
